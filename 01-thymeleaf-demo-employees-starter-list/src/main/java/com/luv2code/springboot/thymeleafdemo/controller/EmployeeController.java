@@ -34,6 +34,7 @@ public class EmployeeController {
 		return "employees/list-employees";
 	}
 
+	// Add new employee
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model theModel) {
 
@@ -45,6 +46,7 @@ public class EmployeeController {
 		return "employees/employee-form";
 	}
 
+	// Update the employee
 	@GetMapping("/showFormForUpdate")
 	public String showFormForUpdate(@RequestParam("employeeId") int theId, Model theModel) {
 
@@ -58,6 +60,7 @@ public class EmployeeController {
 		return "employees/employee-form";
 	}
 
+	// Delete the employee
 	@GetMapping("/delete")
 	public String delete(@RequestParam("employeeId") int theId) {
 
